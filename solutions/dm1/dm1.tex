@@ -1,0 +1,76 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{breqn}
+
+\begin{document}
+	\title{DM1: Désintégration des muons atmosphériques}
+	\author{Gabriel PEREIRA DE CARVALHO}
+	\date{Dernière modification \today}
+	
+	\maketitle
+	
+	\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!black]
+		\textbf{1.} La vitesse des muons cosmiques étant égale à $v \approx 0.995c$ dans le vide, calculer leur libre parcours moyen. 
+	\end{tcolorbox}
+
+	En utilisant la durée de vie propres des muons, on calcule le libre parcours moyen dans le réferentiel du muon. On a $L_{impropre} = v \tau_p = 656,7 \mathrm{m}$.
+
+	\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!black]
+		\textbf{2.}Des muons, produits dans les hautes couches de l'atmosphère, à $\sim 10$ km d'altitude, sont détectés au niveau de la mer. Montrer que ce fait ne peut s'expliquer qu'en invoquant la relativité restreinte, en justifiant votre réponse.
+	\end{tcolorbox}
+
+	En utilisant la cinématique classique, le temps de chute est $\Delta t = \frac{10 \mathrm{km}}{v} = 3.35 \times 10^{-5}s$. Alors, calculons la proportion de muons restants à cette instant
+	
+	$$ n(t) = n_0 e^{-\frac{\Delta t}{\tau_p}} \implies \frac{n(t)}{n_0} = 2,44 \times 10^{-7} << 1 $$
+	
+	d'où on conclue que ce serait pratiquement impossible de détecter des muons au niveau de la mer.
+
+	Alors, en invoquant la relativité restreinte, considérons deux réferentiels: un referentiel d'un observateur sur terre et le referentiel du muon. Le facteur de Lorentz est $\gamma \approx 10$. On s'intéresse à deux évenements. \textbf{E1}, la création du muon et \textbf{E2} sa désintégration. On observe que dans le referentiel du muon, la mésure de temps entre E1 et E2 est propre, cependant la mésure de longueur de la chute est impropre.
+
+	\subsubsection*{Explication 1: Dilation du temps}
+	
+	Dans le referentiel des muons, la mésure du temps de la chute est plus grande $\Delta t_{propre} = \frac{3.35 \times 10^{-5}s}{\gamma} = 3.35 \times 10^{-6}s$. Alors, la proportion de muons restants au niveau de la mer est aussi plus grande
+	
+	$$ \frac{n(t)}{n_0} = 0,22 $$
+	
+	d'où on conclue qu'une proportion significatif des muons ne serait pas encore désintégré au niveau de la mer.
+	
+	\subsubsection*{Explication 2: Contraction des longueurs}
+	
+	Dans le referentiel des muons, la mésure de la longueur de la chute est plus courte $L_{impropre} = \frac{10 \mathrm{km}}{\gamma} = 1 \mathrm{km}$.	Donc, dans le referentiel des muons, on a le temps de chute $\Delta t = \frac{L_{impropre}}{v} = 3.35 \times 10^{-6}s$. On rencontre le même temps de chute calcule dans la première explication, d'où la proportion de muons restants au niveau de la mer est aussi
+	
+	$$ \frac{n(t)}{n_0} = 0,22 $$
+	
+	
+	\subsubsection*{Conclusion}
+	
+	On en conclue que le temps de la chute dans le referentiel du muon est le même pour ces deux interprétations et  la proportion de muons restants au niveau de la mer est assez grande de façon que le muon peut êtré detécté au niveau de la mer.
+
+	\begin{tcolorbox}[colback=gray!5!white,colframe=gray!75!black]
+		\textbf{3.} Effecteur un raisonnement identique pour les pions, dont la vitesse est égale à $0.99995$ fois la vitesse de la lumière, et la durée de vie de $2,6 \times 10^{-8}$s, et indiquer sur quelle distance ils peuvent être détectés au sein des détecteurs de particules.
+	\end{tcolorbox}
+
+	Analogiquement, considérons deux réferentiels: un referentiel d'un observateur sur terre et le referentiel du pion. Le facteur de Lorentz est $\tilde{\gamma} \approx 100$. Supposons que pour détecter des pions au niveau de la mer on cherche la même proportion de l'exercice précedent $\frac{n(t)}{n_0} = 0,22 \implies \frac{\Delta t_{propre}}{\tau_{pion}} = e^{-0,22}$. Soit $d$ la distance qu'on veut déterminer.
+	
+	\subsubsection*{Explication 1: Dilation du temps}
+	
+	On a $ \Delta t_{propre} = \frac{\Delta t_{impropre}}{\tilde{\gamma}} = \frac{d}{v\tilde{\gamma}}$. Or $$ \frac{d}{v\tilde{\gamma}} = e^{-0,22} \tau_{pion} \iff d = 625,93 \mathrm{m}.$$ 
+	
+	\subsubsection*{Explication 2: Contraction des longueurs}
+	
+	Dans le referentiel du pion, la mésure de la longueur de la chute est $L_{impropre} = \frac{d}{\tilde{\gamma}} \implies \Delta t_{propre} = \frac{L_{impropre}}{v} = \frac{d}{v\tilde{\gamma}}$. On rencontre le même temps de chute calcule dans la première explication, d'où $d = 625,93 \mathrm{m}$.
+	
+	\subsubsection*{Conclusion}
+	
+	On en conclue, pour les deux explications, que la distance limite où on arrive à détecter les pions est $d = 625,93 \mathrm{m}$.
+	
+	
+\end{document}
