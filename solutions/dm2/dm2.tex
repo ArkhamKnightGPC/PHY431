@@ -1,0 +1,67 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{breqn}
+
+\begin{document}
+	\title{DM2: Un combiné de paradoxes}
+	\author{Gabriel PEREIRA DE CARVALHO}
+	\date{Dernière modification \today}
+	
+	\maketitle
+	
+	\subsection*{Exercice 1}
+	
+	\subsubsection*{Mésures d'Ulysse}
+	
+	Ulysse mésure son temps propre à bord de la fusée. Donc , on a
+	
+	\begin{align}
+		\begin{cases}
+		\Delta t_{\mathrm{aller}} &= 10 \hspace{0.1cm} \mathrm{ans}\\
+		\Delta t_{\mathrm{retour}} &= 10 \hspace{0.1cm}  \mathrm{ans}\\
+		\Delta t_{\mathrm{total}} &= \Delta t_{\mathrm{aller}} + \Delta t_{\mathrm{retour}} = 20 \hspace{0.1cm} \mathrm{ans}
+		\end{cases}
+	\end{align}
+	
+	\subsubsection*{Mésures d'Achille}
+	
+	Alors, Achille mésure un temps impropre avec $\gamma \approx 1,091$. On a
+	
+	\begin{align}
+	\begin{cases}
+	\Delta t'_{\mathrm{aller}} &= \gamma \Delta t_{\mathrm{aller}} =  10,91 \hspace{0.1cm} \mathrm{ans}\\
+	\Delta t'_{\mathrm{retour}} &= \gamma \Delta t_{\mathrm{retour}} =  10,91 \hspace{0.1cm} \mathrm{ans}\\
+	\Delta t'_{\mathrm{total}} &= \Delta t'_{\mathrm{aller}} + \Delta t'_{\mathrm{retour}} = 21,82 \hspace{0.1cm} \mathrm{ans}
+	\end{cases}
+	\end{align}
+	
+	\subsubsection*{Conclusion}
+	
+	Au moment de leur retrouvailles, on a
+	
+	\begin{align}
+		\begin{cases}
+		\mathrm{Age}_{\mathrm{Ulysse}} &= 18 + \Delta t_{\mathrm{total}} = 38 \hspace{0.1cm} \mathrm{ans} \\
+		\mathrm{Age}_{\mathrm{Achilee}} &= 18 + \Delta t'_{\mathrm{total}} = 39,82 \hspace{0.1cm} \mathrm{ans} 
+		\end{cases}
+	\end{align}
+	
+	\subsection*{Exercice 2}
+	
+	Considérons le référentiel inertiel du garage, Dans ce réferentiel, la longueur du garage est une longueur propre alors que la longueur de la fusée est impropre. On a
+	
+	\begin{equation}
+		L_f^{\mathrm{impropre}} = \frac{L_f}{\gamma} \approx 91,66 \hspace{0.1cm} \mathrm{m} > L_g.
+	\end{equation}
+	
+	On en conclue que Ulysse n'a pas réussi à effecteur le plein express de sa fusée.
+	
+\end{document}
