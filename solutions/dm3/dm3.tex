@@ -1,0 +1,63 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{breqn}
+
+\begin{document}
+	\title{DM3: Non-commutativité des transformations de Lorentz}
+	\author{Gabriel PEREIRA DE CARVALHO}
+	\date{Dernière modification \today}
+	
+	\maketitle
+	
+	\subsection*{Exercice 1}
+	
+	Posons la rapidité $\alpha_1 = \mathrm{artanh}\left(\frac{v_1}{c}\right)$, on a la matrice de passage de $\mathcal{R}$ à $\mathcal{R}'$
+	
+	$$ \Lambda(\vec{v_1}) = \Lambda(\alpha_1) = \begin{pmatrix}
+	\cosh(\alpha_1) & -\sinh(\alpha_1) & 0 & 0 \\
+	-\sinh(\alpha_1) & \cosh(\alpha_1) & 0 & 0 \\
+	0 & 0 & 1 & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}.$$
+	
+	\subsection*{Exercice 2}
+	
+	Analogiquement ^posons la rapidité $\alpha_2 = \mathrm{artanh}\left(\frac{v_2}{c}\right)$, on a la matrice de passage de $\mathcal{R}'$ à $\mathcal{R}''$
+	
+	$$ \Lambda(\vec{v_2}) = \Lambda_2(\alpha_2) = \begin{pmatrix}
+	\cosh(\alpha_2) & 0 &  -\sinh(\alpha_2) & 0 \\
+	0 & 1 & 0 & 0 \\
+	-\sinh(\alpha_2) & 0 & \cosh(\alpha_2) & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}.$$
+	
+	\subsection*{Exercice 3}
+	
+	Alors, pour calculer la matrice de passage de $\mathcal{R}$ à $\mathcal{R}''$ on fait le produit
+	
+	$$ \Lambda(\vec{v_2}) \Lambda(\vec{v_1}) = \Lambda_2(\alpha_2) \Lambda(\alpha_1) = \begin{pmatrix}
+	\cosh(\alpha_1)\cosh(\alpha_2) & -\sinh(\alpha_1)\cosh(\alpha_2) & -\sinh(\alpha_2) & 0 \\
+	-\sinh(\alpha_1) & \cosh(\alpha_1) & 0 & 0 \\
+	-\cosh(\alpha_1)\sinh(\alpha_2) & \sinh(\alpha_1)\sinh(\alpha_2) & \cosh(\alpha_2) & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}
+	$$
+	
+	On remarque que $\Lambda(\vec{v_2}) \Lambda(\vec{v_1}) \not= \Lambda(\vec{v_1}) \Lambda(\vec{v_2})$, en effet
+	
+	$$ \Lambda(\vec{v_1}) \Lambda(\vec{v_2}) = \begin{pmatrix}
+	\cosh(\alpha_1)\cosh(\alpha_2) & -\sinh(\alpha_1) & -\cosh(\alpha_1)\sinh(\alpha_2) & 0 \\
+	-\sinh(\alpha_1)\cosh(\alpha_2) & \cosh(\alpha_1) & \sinh(\alpha_1)\sinh(\alpha_2) & 0 \\
+	-\sinh(\alpha_2) & 0 & \cosh(\alpha_2) & 0 \\
+	0 & 0 & 0 & 1
+	\end{pmatrix}$$
+	
+\end{document}
