@@ -1,0 +1,100 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{breqn}
+
+\begin{document}
+	\title{DM7: Particule chargée dans un champ électrique}
+	\author{Gabriel PEREIRA DE CARVALHO}
+	\date{\today}
+	
+	\maketitle
+	
+	\subsection*{Exercice 1}
+	
+	On applique la relation fondamentale de la dynamique avec la quadri-force de Lorentz dû au champ $\vec{E}$
+	
+	$$\frac{d \underline{P}}{d \tau} = \underline{\mathcal{F}}_{Lorentz} \implies m\frac{du^\mu}{d \tau} = q F^{\mu \nu} u_\nu.$$
+	
+	Alors, en forme matricielle on a
+	
+	$$ \frac{d}{d \tau} \begin{pmatrix}
+	u^0 \\ u^x \\ u^y \\ u^z
+	\end{pmatrix} = \frac{q}{m} \begin{pmatrix}
+	0 & \frac{E}{c} & 0 & 0 \\
+	\frac{E}{c} & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0 \\
+	0 & 0 & 0 & 0
+	\end{pmatrix}\begin{pmatrix}
+	u^0 \\ u^x \\ u^y \\ u^z
+	\end{pmatrix} $$
+	
+	ce qui donne le système
+	
+	\begin{align}
+		\begin{cases}
+		\frac{d u^0}{d \tau} &= \frac{qE}{mc} u^x \\
+		\frac{d u^x}{d \tau} &= \frac{qE}{mc} u^0 \\
+		\frac{d u^y}{d \tau} & = 0 \\
+		\frac{d u^z}{d \tau} &= 0.
+		\end{cases}
+	\end{align}
+	
+	On observe que $u^y = u^y(\tau = 0)$ et $u^z = u^z(\tau = 0)$. D'où les vitesses $v_y$ et $v_z$ perpendiculares au champ $\vec{E}$ sont constantes. On a encore les deux premières équations à résoudre
+	
+	\begin{align}
+	\begin{cases}
+	\frac{d u^0}{d \tau} &= \frac{qE}{mc} u^x \\
+	\frac{d u^x}{d \tau} &= \frac{qE}{mc} u^0 
+	\end{cases}
+	\end{align}
+	
+	On peut isoler la variable $u^x$ qui nous intéresse. On a
+	
+	$$ \frac{d^2 u^x}{d \tau^2} = \frac{qE}{mc} \frac{d u^0}{d \tau} = \left(\frac{qE}{mc}\right)^2 u^x $$
+	
+	posons $\omega = \frac{qE}{mc}$, on a 
+	
+	\begin{equation}
+		\frac{d^2 u^x}{d \tau^2} = \omega^2 u^x
+	\end{equation}
+	
+	ce qui correspond à l'équation d'un oscillateur harmonique. D'où
+	
+	\begin{equation}
+		u^x = A \cos(\omega \tau) + B \sin(- \omega \tau).
+	\end{equation}
+	
+	Alors, en utilisant $ u^x = \frac{d x}{d \tau} = \frac{d t}{d \tau} v_x $ on calcule
+	
+	$$ v_x  = \frac{A}{\gamma} \cos\left(\omega \frac{t}{\gamma}\right) + \frac{B}{\gamma} \sin\left(\omega \frac{t}{\gamma}\right)$$
+	
+	Cependant, on note que comme le facteur de Lorentz instantanée dépend encore de la vitesse, on a une équation implicite.
+	
+	\subsection*{Exercice 2}
+	
+	Posons $a = \frac{qE}{m}$ et $v_{0, x} = 0$.
+	
+	Par la \textbf{section 4.4.3 du poly}, on a
+	
+	$$ v_x = \frac{at}{\sqrt{1 + \frac{a^2}{c^2}t^2}} $$
+	
+	\subsection*{Exercice 3}
+	
+	L'énergie de la particule est
+	
+	\begin{equation}
+		E = \sqrt{p^2c^2 + m^2 c^4} = mc^2 \sqrt{v_x^2 + v_y^2 + 1}
+	\end{equation} 
+	
+	
+	
+\end{document}
