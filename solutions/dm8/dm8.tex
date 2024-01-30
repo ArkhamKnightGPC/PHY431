@@ -60,6 +60,63 @@
 	
 	\subsubsection*{Partie 2: Équations de mouvement}
 	
+	On utilise les équations d'Euler-Lagrange par rapport aux coordonées $\theta_1$ et $\theta_2$.
+	
+	D'abord, considerons l'équation
+	\begin{equation}
+		\frac{\partial}{\partial \theta_1} \mathcal{L} = \frac{d}{dt} \left(\frac{\partial}{\partial \dot{\theta}_1} \mathcal{L}\right)
+	\end{equation}
+	
+	On calcule les dérivées
+	
+	\begin{align}
+		\begin{cases}
+			\frac{\partial}{\partial \theta_1} \mathcal{L} &= (m_1 + m_2)gl_1\sin(\theta_1) - m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2)\\
+			\frac{\partial}{\partial \dot{\theta}_1} \mathcal{L} &= (m_1 + m_2)l_1^2 \dot{\theta}_1 + m_2l_1l_2 \dot{\theta}_2\cos(\theta_1 - \theta_2) \\ \frac{d}{dt} \left(\frac{\partial}{\partial \dot{\theta}_1} \mathcal{L}\right) &= (m_1 + m_2)l_1^2\ddot{\theta}_1 + m_2l_1l_2\ddot{\theta_2}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_2(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1 - \theta_2)
+		\end{cases}
+	\end{align}
+	
+	
+	Donc, on a notre première équation de mouvement
+	
+	$$ (m_1 + m_2)gl_1\sin(\theta_1) - m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2) = (m_1 + m_2)l_1^2\ddot{\theta}_1 + m_2l_1l_2\ddot{\theta_2}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_2(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1 - \theta_2)$$
+	
+	Alors, considerons l'équation
+	
+	\begin{equation}
+		\frac{\partial}{\partial \theta_2} \mathcal{L} = \frac{d}{dt} \left(\frac{\partial}{\partial \dot{\theta}_2} \mathcal{L}\right)
+	\end{equation}
+	
+	On calcule les dérivées
+	
+	\begin{align}
+	\begin{cases}
+	\frac{\partial}{\partial \theta_2} \mathcal{L} &= m_2gl_2\sin(\theta_2) + m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2)\\
+	\frac{\partial}{\partial \dot{\theta}_2} \mathcal{L} &= m_2l_2^2\dot{\theta}_2 + m_2l_1l_2\dot{\theta}_1\cos(\theta_1 - \theta_2) \\ \frac{d}{dt} \left(\frac{\partial}{\partial \dot{\theta}_2} \mathcal{L}\right) &= m_2l_2^2\ddot{\theta}_2 + m_2l_1l_2\ddot{\theta_1}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_1(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1-\theta_2)
+	\end{cases}
+	\end{align}
+	
+	Donc, on a notre première deuxième équation de mouvement
+	
+	$$ m_2gl_2\sin(\theta_2) + m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2) =   m_2l_2^2\ddot{\theta}_2 + m_2l_1l_2\ddot{\theta_1}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_1(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1-\theta_2)$$
+	
+	\begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black]
+		\begingroup\makeatletter\def\f@size{5}\check@mathfonts
+		\begin{align}
+			\begin{cases}
+			(m_1 + m_2)gl_1\sin(\theta_1) - m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2) = (m_1 + m_2)l_1^2\ddot{\theta}_1 + m_2l_1l_2\ddot{\theta_2}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_2(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1 - \theta_2) \\
+			m_2gl_2\sin(\theta_2) + m_2l_1l_2\dot{\theta}_1\dot{\theta_2}\sin(\theta_1 - \theta_2) =   m_2l_2^2\ddot{\theta}_2 + m_2l_1l_2\ddot{\theta_1}\cos(\theta_1 - \theta_2) - m_2l_1l_2\dot{\theta}_1(\dot{\theta_1} - \dot{\theta_2})\sin(\theta_1-\theta_2)
+			\end{cases}
+		\end{align}
+		\endgroup
+	\end{tcolorbox}
 	
 	\subsection*{Exercice 2}
+	
+	On remarque que le lagrangien ne dépend pas explicitement du temps, donc le système est isolé et \textbf{l'énergie est conservée}. Cependant, l'impulsion n'est pas conservé car le lagrangien n'est pas invariant par translation et le moment cinétique est conservé seulement dans le axe perpendiculaire au plan du mouvement.
+	
+	Par le \textbf{Théorème de Poincaré-Bendixson}, une condition nécessaire pour un système chaotique est avoir $\geq 3$ variables indépendantes. Donc, on conclue que le double pendule décrit dans l'exercice n'est pas chaotique.
+	
+	Cependant, on remarque que si les masses ne restent pas dans un même plan vertical, on aurait plus de dégrés de liberté et là le système pourrait être chaotique.
+	
 \end{document}
