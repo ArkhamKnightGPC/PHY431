@@ -1,0 +1,117 @@
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper]{geometry}
+\usepackage{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{tcolorbox}
+\usepackage{color}
+\usepackage{breqn}
+
+\begin{document}
+	\title{DM9: Particule relativiste dans un champ électromagnétique}
+	\author{Gabriel PEREIRA DE CARVALHO}
+	\date{\today}
+	
+	\maketitle
+	
+	\subsection*{Exercice 1}
+	
+	Par définition, l'action le long d'une trajectoire est donnée par
+	
+	\begin{equation}
+		\mathcal{S} = \int_{t_1}^{t_1} \mathcal{L}(x,\dot{x};t) dt
+	\end{equation}
+	
+	D'où le Lagrangien d'interaction électromagnétique est donné par
+	
+	\begin{equation}
+		\mathcal{L}_{emg} = -q \eta_{\mu \nu} A^{\mu} \dot{x}^{\nu}
+	\end{equation}
+	
+	En développant la notation d'Einstein, on a
+	
+	\begin{align}
+		\eta_{\mu \nu} A^{\mu} \dot{x}^{\nu} &= A^0 \dot{x}^0 - A^1 \dot{x}^1 - A^2 \dot{x}^2 - A^3 \dot{x}^3 \\
+		&= \frac{\phi}{c} c \frac{dt}{dt} - A_x \frac{dx}{dt} - A_y \frac{dy}{dt} - A_z \frac{dz}{dt} \\
+		&= \phi - A_x v_x - A_y v_y - A_z v_z \\
+		&= \phi - \vec{v} \cdot \vec{A}
+	\end{align}
+	
+	On en conclue que
+	
+	\begin{equation}
+	\mathcal{L}_{emg} = q \left(-\phi + \vec{v} \cdot \vec{A} \right)
+	\end{equation}
+	
+	\subsection*{Exercice 2}
+	
+	Le lagrangien d'une particule libre est donné par
+	
+	\begin{equation}
+		\mathcal{L}_{lib} = \frac{1}{2} m \dot{x}
+	\end{equation}
+	
+	d'où on a le Lagrangien total
+	
+	\begin{equation}
+		\mathcal{L} = \mathcal{L}_{lib} +\mathcal{L}_{emg}  = \frac{1}{2} m \dot{x} + q \left(-\phi + \vec{v} \cdot \vec{A} \right)
+	\end{equation}
+	
+	Alors, calculons les moments conjugués $p_i$. On a
+	
+	\begin{align}
+		p_i &= \frac{\partial \mathcal{L}}{\partial \dot{x}_i} \\
+		&= \frac{\partial}{\partial \dot{x}_i} \left( \frac{1}{2} m \dot{x} + q \left(-\phi + \vec{v} \cdot \vec{A} \right) \right) \\
+		&= m \dot{x}_i + q A_i
+	\end{align}
+	
+	On en conclue que $\vec{p} = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m \dot{x} + q \vec{A}$.
+	
+	\subsection*{Exercice 3}
+	
+	Écrivons l'équation d'Euler Lagrange
+	
+	\begin{equation}
+		\frac{d}{d t} \left(\frac{\partial \mathcal{L}}{\partial \dot{x}}\right) = \frac{\partial \mathcal{L}}{\partial x} \iff \frac{d}{dt} \left( m\dot{x} + q \vec{A} \right) = q \left( - \nabla \phi + \nabla (\vec{v} \cdot \vec{A}) \right)
+	\end{equation}
+	
+	en fonction de $\vec{p}_{lib}$, on a
+	
+	\begin{equation}
+		\frac{d}{dt} \vec{p}_{lib} = q \left( -\frac{d\vec{A}}{dt} - \nabla \phi + \nabla (\vec{v} \cdot \vec{A}) \right)
+	\end{equation}
+	
+	\subsection*{Exercice 4}
+	
+	On calcule
+	
+	\begin{align}
+		\frac{d \vec{A}}{dt}  &= \frac{\partial \vec{A}}{\partial t} + \left(\dot{x}\frac{\partial \vec{A}}{\partial x} + \dot{y}\frac{\partial \vec{A}}{\partial y} + \dot{z}\frac{\partial \vec{A}}{\partial z} \right)\\
+		&= \frac{\partial \vec{A}}{\partial t} + (\vec{v} \cdot \nabla) \vec{A}
+	\end{align}
+	
+	Par la relation $\nabla (\vec{v} \cdot \vec{A}) = (\vec{v} \cdot \nabla) \vec{A} + \vec{v} \times (\nabla \times A)$ on a 
+	
+	\begin{equation}
+		-\frac{d \vec{A}}{dt} + \nabla (\vec{v} \cdot \vec{A}) = - \frac{\partial \vec{A}}{\partial t} + \vec{v} \times (\nabla \times A)
+	\end{equation}
+	
+	Donc, on peut récrire l'équation d'Euler Lagrange 
+	
+	\begin{equation}
+		\frac{d}{dt} \vec{p}_{lib} = q \left( - \nabla \phi  - \frac{\partial \vec{A}}{\partial t} + \vec{v} \times (\nabla \times A)  \right)
+	\end{equation}
+	
+	Alors, on utilise les rélations $\vec{B} = \nabla \times A$ et $\vec{E} =  - \nabla \phi  - \frac{\partial \vec{A}}{\partial t}$ qui donnent
+	
+	\begin{equation}
+		\frac{d}{dt} \vec{p}_{lib} = q \left( \vec{E} + v \times \vec{B} \right)
+	\end{equation}
+	
+	
+\end{document}
+	
